@@ -8,71 +8,132 @@
       <!-- Logo (kept exactly as you had it, now using navbar-brand for proper spacing) -->
       <a class="d-flex align-items-center my-2 my-lg-0 text-white text-decoration-none navbar-brand"
          routerLink="/">
-
-        <div class="text-white fs-1 fw-bold fst-italic">Stainless<span class="text-success">Glass</span></div>
+            <div class="d-flex align-items-center gap-2">
+              <img src="/img/white.png" alt="logo">
+              <span>ZAKSPRENEUR</span>
+            </div>
       </a>
 
-      <!-- Hamburger toggler button (only visible on mobile) -->
-      <button class="navbar-toggler bg-white"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#mainNav"
-              aria-controls="mainNav"
-              aria-expanded="false"
-              aria-label="Toggle navigation">
+<!--       Hamburger toggler button (only visible on mobile)-->
+<!--      <button class="navbar-toggler bg-white"-->
+<!--              type="button"-->
+<!--              data-bs-toggle="collapse"-->
+<!--              data-bs-target="#mainNav"-->
+<!--              aria-controls="mainNav"-->
+<!--              aria-expanded="false"-->
+<!--              aria-label="Toggle navigation">-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--      </button>-->
+
+<!--      &lt;!&ndash; Collapsible menu (this is what becomes the hamburger dropdown on mobile) &ndash;&gt;-->
+<!--      <div class="collapse navbar-collapse" id="mainNav">-->
+<!--        <ul class="navbar-nav ms-auto my-2 my-lg-0 text-small">-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link text-white fw-bold"-->
+<!--               routerLink="/"-->
+<!--               routerLinkActive="active">-->
+<!--              <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">-->
+<!--                <use href="#house"></use>-->
+<!--              </svg>-->
+<!--              Home-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link text-white fw-bold"-->
+<!--               routerLink="/about">-->
+<!--              <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">-->
+<!--                <use href="#speedometer2"></use>-->
+<!--              </svg>-->
+<!--              About-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link text-white fw-bold"-->
+<!--               routerLink="/orders">-->
+<!--              <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">-->
+<!--                <use xlink:href="#table"></use>-->
+<!--              </svg>-->
+<!--              Orders-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link text-white fw-bold"-->
+<!--               routerLink="/services">-->
+<!--              <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">-->
+<!--                <use xlink:href="#grid"></use>-->
+<!--              </svg>-->
+<!--              Services-->
+<!--            </a>-->
+<!--          </li>-->
+<!--          <li class="nav-item">-->
+<!--            <a class="nav-link text-white fw-bold"-->
+<!--               routerLink="/customers">-->
+<!--              <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">-->
+<!--                <use xlink:href="#people-circle"></use>-->
+<!--              </svg>-->
+<!--              Customers-->
+<!--            </a>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </div>-->
+      <button
+        class="navbar-toggler bg-white"
+        type="button"
+        (click)="isMenuOpen = !isMenuOpen">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- Collapsible menu (this is what becomes the hamburger dropdown on mobile) -->
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto my-2 my-lg-0 text-small">
+      <!-- Collapsible menu -->
+      <div [ngbCollapse]="!isMenuOpen" class="collapse navbar-collapse">
+
+        <ul class="navbar-nav ms-auto gap-4">
+
           <li class="nav-item">
-            <a class="nav-link text-white fw-bold"
-               routerLink="/"
-               routerLinkActive="active">
-              <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">
-                <use href="#house"></use>
-              </svg>
+            <a class="nav-link text-white fw-bold" routerLink="/" (click)="isMenuOpen=false">
+<!--              <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">-->
+<!--                <use href="#house"></use>-->
+<!--              </svg>-->
               Home
             </a>
+
           </li>
+
           <li class="nav-item">
-            <a class="nav-link text-white fw-bold"
-               routerLink="/about">
-              <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">
-                <use href="#speedometer2"></use>
-              </svg>
+            <a class="nav-link text-white fw-bold" routerLink="/services" (click)="isMenuOpen=false">
+<!--              <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">-->
+<!--                <use href="#grid"></use>-->
+<!--              </svg>-->
+              Services</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white fw-bold" routerLink="/about" (click)="isMenuOpen=false">
+<!--              <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">-->
+<!--                <use href="#speedometer2"></use>-->
+<!--              </svg>-->
+              Projects
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link text-white fw-bold" routerLink="/orders" (click)="isMenuOpen=false">
+<!--              <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">-->
+<!--                <use href="#table"></use>-->
+<!--              </svg>-->
               About
             </a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link text-white fw-bold"
-               routerLink="/orders">
-              <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">
-                <use xlink:href="#table"></use>
-              </svg>
-              Orders
-            </a>
+            <a class="nav-link text-white fw-bold" routerLink="/services" (click)="isMenuOpen=false">
+<!--              <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">-->
+<!--                <use href="#grid"></use>-->
+<!--              </svg>-->
+              Me</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link text-white fw-bold"
-               routerLink="/services">
-              <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">
-                <use xlink:href="#grid"></use>
-              </svg>
-              Services
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white fw-bold"
-               routerLink="/customers">
-              <svg class="bi d-block mx-auto mb-1" width="24" height="24" aria-hidden="true">
-                <use xlink:href="#people-circle"></use>
-              </svg>
-              Customers
-            </a>
-          </li>
+
         </ul>
+
       </div>
     </div>
   </nav>
