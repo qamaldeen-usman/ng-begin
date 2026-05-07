@@ -1,5 +1,20 @@
-.homepage-bg {
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/assets/img/others/stainlessglassbg.jpg") no-repeat center center;
-  background-size: cover;
-  min-height: 100vh;
+.hero-section{
+  min-height: auto !important;
+  padding-top: 120px !important;
+  padding-bottom: 60px !important;
+}
+
+.hero-section .display-4{
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.1;
+}
+
+.hero-section .parallax{
+  max-width: 580px !important;
+  margin-inline: auto;
+}
+
+.hero-section img{
+  max-width: 100%;
+  height: auto;
 }
