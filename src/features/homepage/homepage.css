@@ -18,3 +18,140 @@
   max-width: 100%;
   height: auto;
 }
+
+.hero-section {
+  background-color: #0b0f19;
+  overflow: hidden;
+}
+
+/* Light/Dark Theme Support */
+[data-bs-theme='light'] .hero-section {
+  background-color: #f6f9fc;
+}
+
+.hero-title {
+  color: #fff;
+}
+
+.hero-text {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Light theme text */
+[data-bs-theme='light'] .hero-title {
+  color: #0b0f19;
+}
+
+[data-bs-theme='light'] .hero-text {
+  color: rgba(11, 15, 25, 0.7);
+}
+
+/* Bottom wave follows theme */
+.hero-wave {
+  color: var(--ar-body-bg);
+}
+
+/* Jarallax background */
+.jarallax-img {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Section positioning */
+.categories-section {
+  position: relative;
+}
+
+/* Card */
+.category-card {
+  position: relative;
+  display: block;
+  height: 100%;
+  transition: transform .35s ease;
+  background: transparent;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Overlay */
+.category-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(18, 21, 25, 0) 35.56%,
+    #121519 95.3%
+  );
+}
+
+/* Content */
+.category-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  opacity: 0;
+  transform: translateY(10px);
+
+  transition: all .35s ease;
+}
+
+.category-card:hover .category-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Image zoom */
+.zoom-effect-wrapper {
+  overflow: hidden;
+}
+
+.zoom-effect-img img {
+  width: 100%;
+  display: block;
+  transition: transform .6s ease;
+}
+
+.category-card:hover .zoom-effect-img img {
+  transform: scale(1.08);
+}
+
+/* Swiper spacing */
+.categories-swiper {
+  padding-bottom: 60px;
+}
+
+/* Pagination */
+.swiper-pagination-bullet {
+  background: #0b1f16;
+  opacity: .35;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+.categories-swiper::part(pagination) {
+  bottom: -10px !important;
+
+}
+
+/* Theme Support */
+[data-bs-theme='light'] .category-overlay {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 35.56%,
+    rgba(255, 255, 255, 0.96) 95.3%
+  );
+}
+
+[data-bs-theme='light'] .category-card h3 {
+  color: #0b0f19 !important;
+}
+
+[data-bs-theme='light'] .category-content span {
+  color: rgba(11, 15, 25, 0.75) !important;
+}

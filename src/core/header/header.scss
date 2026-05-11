@@ -218,3 +218,19 @@ input:checked + .slider::before {
   }
 
 }
+
+@media (max-width: 380px) {
+
+  .logo {
+    height: 42px;
+  }
+
+  .navbar-brand span {
+    font-size: .72rem;
+  }
+
+  .theme-switcher {
+    gap: .1rem;
+  }
+
+}

@@ -1,9 +1,9 @@
 <header class="navbar navbar-expand-lg fixed-top zaks-green">
 
-  <div class="container custom-navbar-container">
+  <div class="container-fluid px-3 px-lg-4 custom-navbar-container">
 
     <!-- Logo -->
-    <a class="navbar-brand pe-sm-3 d-flex align-items-center"
+    <a class="navbar-brand d-flex align-items-center flex-shrink-0"
        routerLink="/">
 
       <img src="/lglgtrans.svg"
@@ -15,22 +15,22 @@
       </span>
     </a>
 
-    <!-- Theme switcher -->
-    <div class="theme-switcher d-flex align-items-center order-lg-2 ms-auto me-3">
+<!--    &lt;!&ndash; Theme switcher &ndash;&gt;-->
+<!--    <div class="theme-switcher d-flex align-items-center ms-auto">-->
 
-      <i class="bi bi-sun text-white me-2"></i>
+<!--      <i class="bi bi-sun text-white me-2"></i>-->
 
-      <label class="switch">
-        <input type="checkbox" [checked]="isDarkMode" (change)="toggleTheme($event)">
-        <span class="slider"></span>
-      </label>
+<!--      <label class="switch">-->
+<!--        <input type="checkbox" [checked]="isDarkMode" (change)="toggleTheme($event)">-->
+<!--        <span class="slider"></span>-->
+<!--      </label>-->
 
-      <i class="bi bi-moon text-white ms-2"></i>
-    </div>
+<!--      <i class="bi bi-moon text-white ms-2"></i>-->
+<!--    </div>-->
 
     <!-- Mobile Toggler -->
     <button
-      class="navbar-toggler ms-3"
+      class="navbar-toggler ms-2 flex-shrink-0"
       type="button"
       (click)="isMenuOpen = !isMenuOpen"
       [attr.aria-expanded]="isMenuOpen">
@@ -38,15 +38,19 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
+
+
     <!-- Navbar -->
     <nav class="collapse navbar-collapse"
          [class.show]="isMenuOpen">
+
 
       <ul class="navbar-nav ms-auto">
 
         <li class="nav-item">
           <a class="nav-link"
              routerLink="/"
+             routerLinkActive="active"
              (click)="isMenuOpen=false">
             Home
           </a>
@@ -85,6 +89,18 @@
         </li>
 
       </ul>
+      <!-- Theme switcher -->
+      <div class="theme-switcher d-flex align-items-center ms-auto">
+
+        <i class="bi bi-sun text-white me-2"></i>
+
+        <label class="switch">
+          <input type="checkbox" [checked]="isDarkMode" (change)="toggleTheme($event)">
+          <span class="slider"></span>
+        </label>
+
+        <i class="bi bi-moon text-white ms-2"></i>
+      </div>
 
     </nav>
 

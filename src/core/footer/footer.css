@@ -1,0 +1,140 @@
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+  position: relative;
+  background: #0b0f19;
+  color: rgba(255,255,255,.72);
+  overflow: hidden;
+}
+
+/* Light Theme */
+[data-bs-theme='light'] .site-footer {
+  background: #ffffff;
+  color: rgba(11,15,25,.72);
+  border-top: 1px solid rgba(0,0,0,.08);
+}
+
+.footer-logo {
+  max-height: 98px;
+  width: auto;
+}
+
+.navbar-brand {
+  background: #0b1f16;
+  border-style: solid;
+  border-width: 1px 1px 1px;
+  border-radius: 15px;
+}
+
+.footer-text {
+  max-width: 420px;
+  line-height: 1.8;
+  font-size: .96rem;
+}
+
+.footer-heading,
+.footer-title {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+[data-bs-theme='light'] .footer-heading,
+[data-bs-theme='light'] .footer-title {
+  color: #0b0f19;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: .7rem;
+}
+
+.footer-links a {
+  color: #0f440f;
+  text-decoration: none;
+  transition: all .25s ease;
+  opacity: .75;
+}
+
+.footer-links a:hover,
+.footer-links a.active {
+  opacity: 1;
+  color: #FFFFFF;
+  padding-left: 4px;
+}
+
+.social-btn {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  font-weight: bold;
+
+  text-decoration: none;
+  font-size: 1.2rem;
+
+  background: rgba(255,255,255,.08);
+  color: #fff;
+
+  transition: all .3s ease;
+}
+
+.social-btn:hover {
+  transform: translateY(-4px);
+  background: #0b1f16;
+  color: #fff;
+}
+
+[data-bs-theme='light'] .social-btn {
+  background: rgba(11,15,25,.06);
+  color: #0b0f19;
+}
+
+.footer-contact p {
+  display: flex;
+  gap: .75rem;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.footer-contact i {
+  color: #fff;
+  margin-top: 4px;
+  font-size: 1rem;
+}
+
+.footer-bottom {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+
+  border-top: 1px solid rgba(255,255,255,.08);
+
+  text-align: center;
+  font-size: .92rem;
+}
+
+[data-bs-theme='light'] .footer-bottom {
+  border-color: rgba(0,0,0,.08);
+}
+
+@media (max-width: 991px) {
+
+  .footer-bottom {
+    margin-top: 3rem;
+  }
+
+  .footer-logo {
+    max-height: 70px;
+  }
+
+}
