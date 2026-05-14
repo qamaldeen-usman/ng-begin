@@ -13,9 +13,20 @@ import { jarallax } from 'jarallax';
 
 export class HomePage implements AfterViewInit {
 
-  ngAfterViewInit(): void {
+
+  async ngAfterViewInit() {
+
+    const { jarallax } = await import('jarallax');
+
     jarallax(document.querySelectorAll('.jarallax'), {
       speed: 0.4
     });
+
   }
+
+  // ngAfterViewInit(): void {
+  //   jarallax(document.querySelectorAll('.jarallax'), {
+  //     speed: 0.4
+  //   });
+  // }
 }
